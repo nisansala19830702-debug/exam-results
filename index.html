@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exam Results</title>
+
+<style>
+body{
+font-family:Arial;
+background:#f2f2f2;
+text-align:center;
+padding-top:100px;
+}
+
+.box{
+background:white;
+width:350px;
+margin:auto;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+font-size:18px;
+}
+
+button{
+padding:10px 20px;
+background:green;
+color:white;
+border:none;
+font-size:18px;
+border-radius:5px;
+}
+
+#msg{
+color:red;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Exam Result Department</h2>
+
+<input type="text" id="index" placeholder="Enter Index Number">
+
+<button onclick="searchResult()">Search</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+
+function searchResult(){
+
+let index=document.getElementById("index").value;
+
+if(index=="1001"){
+window.location="student1.pdf";
+}
+else{
+document.getElementById("msg").innerHTML="Result Not Found";
+}
+
+}
+
+</script>
+
+</body>
+</html>
